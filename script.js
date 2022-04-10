@@ -9,17 +9,17 @@ const space = {
     */
    get object() {
        const len = this.objects.length -1;
-       let obj = this.objects[Math.floor(Math.random()*len)];
+       let obj = this.objects[Math.round(Math.random()*len)];
        return obj;
    },
    get effect() {
         const len = this.effects.length -1;
-        let eff = this.effects[Math.floor(Math.random()*len)];
+        let eff = this.effects[Math.round(Math.random()*len)];
         return eff;
    },
    get zone() {
         const len = this.zones.length -1;
-        let zone = this.zones[Math.floor(Math.random()*len)];
+        let zone = this.zones[Math.round(Math.random()*len)];
         return zone;
    },
    get spaceshipName() {
@@ -28,7 +28,7 @@ const space = {
    },
    get spaceshipPart() {
        // In this case the different objects for both spaceships is pointless because both have the same structure list
-       let part = this.spaceships[0].structure[Math.floor(Math.random()*8)];
+       let part = this.spaceships[0].structure[Math.round(Math.random()*8)];
        return part;
    }
 };
@@ -54,35 +54,36 @@ const words = {
     },
     get attack() {
         let len = this.verbs.attack.length-1;
-        return this.verbs.attack[Math.floor(Math.random()*len)];
+        return this.verbs.attack[Math.round(Math.random()*len)];
     },
     get cause() {
         let len = this.verbs.causation.length-1;
-        return this.verbs.causation[Math.floor(Math.random()*len)];
+        return this.verbs.causation[Math.round(Math.random()*len)];
     },
     get passive() {
         let len = this.verbs.passive.length-1;
-        return this.verbs.passive[Math.floor(Math.random()*len)];
+        return this.verbs.passive[Math.round(Math.random()*len)];
     },
     get locate() {
         let len = this.location.length-1;
-        return this.location[Math.floor(Math.random()*len)];
+        return this.location[Math.round(Math.random()*len)];
     },
     get quant() {
         let len = this.quantity.length-1;
-        return this.quantity[Math.floor(Math.random()*len)];
+        return this.quantity[Math.round(Math.random()*len)];
     },
     get weapon() {
         let len = this.weapons.length-1;
-        return this.weapons[Math.floor(Math.random()*len)];
+        return this.weapons[Math.round(Math.random()*len)];
     },
     get adjective() {
         let len = this.adjectives.length-1;
-        return this.adjectives[Math.floor(Math.random()*len)];
+        return this.adjectives[Math.round(Math.random()*len)];
     },
     get add() {
         let len = this.adding.length-1;
-        return this.adding[Math.floor(Math.random()*len)];
+        return this.adding[Math.round(Math.random()*len)];
     },
 };
 
+/* FIRST COMMIT DONE */
