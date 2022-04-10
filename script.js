@@ -1,9 +1,9 @@
 const space = {
-    objects: ['asteroid', 'star', 'comet', 'planet', 'meteoroids', 'Nebulae'],
-    effects: [' an explosion', ' a laseration', ' damage', ' an infinite loop', ' it run out of memory', ' a shutdown', ' a gas cloud', ' a scene', ' drama'],
-    zones: [' Meteor Belt', ' Cloud Belt', ' Matrix Constellation', ' Star Cluster', ' Time Out Galaxy', ' Let Me Refuel Galaxy', ' sucking Black Hole'],
-    spaceships: [{name: ' Codecademyzor', structure: [' panels', ' tank', ' nose cone', ' propulsion system', ' eleveons', ' engines', ' flight deck', ' wings', ' payload doors']}, 
-                 {name: ' Codenizer', structure: [' panels', ' tank', ' nose cone', ' propulsion system', ' eleveons', ' engines', ' flight deck', ' wings', ' payload doors']}],
+    objects: ['asteroid', 'star', 'comet', 'planet', 'meteoroid', 'Nebulae'],
+    effects: ['an explosion', 'a laseration', 'damage', 'an infinite loop', 'it run out of memory', 'a shutdown', 'a gas cloud', 'a scene', 'drama'],
+    zones: ['Meteor Belt', 'Cloud Belt', 'Matrix Constellation', 'Star Cluster', 'Time Out Galaxy', 'Let Me Refuel Galaxy', 'sucking Black Hole'],
+    spaceships: [{name: 'Codecademyzor', structure: ['panels', 'tank', 'nose cone', 'propulsion system', 'eleveons', 'engines', 'flight deck', 'wings', 'payload doors']}, 
+                 {name: 'Codenizer', structure: ['panels', 'tank', 'nose cone', 'propulsion system', 'eleveons', 'engines', 'flight deck', 'wings', 'payload doors']}],
     /*
     **************************************
     */
@@ -36,17 +36,17 @@ const space = {
 const words = {
     starters: ['The', 'A'],
     verbs: {
-        passive: [' refuel', ' passes', ' approaches', ' relocates', ' goes', ' vibrates', ' hides', ' flies', ' travels'],
-        continuous: [' passing', ' approaching', ' going', ' vibrating', ' collapsing', ' emerging', ' flying', ' travelling'],
-        actions: [' collides', ' smashes', ' affects', ' crashes'],
-        causation: [' causing', ' making', ' generating', ' provoking', ' letting'],
-        attack: [' fires', ' sends', ' attacks with', ' directs', ' targets']
+        passive: ['refuels', 'passes', 'approaches', 'relocates', 'goes', 'vibrates', 'hides', 'flies', 'travels'],
+        continuous: ['passing', 'approaching', 'going', 'vibrating', 'collapsing', 'emerging', 'flying', 'travelling'],
+        actions: ['collides', 'smashes', 'affects', 'crashes'],
+        causation: ['causing', 'making', 'generating', 'provoking', 'letting in'],
+        attack: ['fires', 'sends', 'attacks with', 'directs', 'targets']
     },
-    location: [' in the', ' at the', ' near the', ' right into the', ' below the', ' inside the', ' by the', ' through the', ' among the', ' above the', ' besides the', ' in front the'],
+    location: ['in the', 'at the', 'near the', 'right into the', 'below the', 'inside the', 'by the', 'through the', 'among the', 'above the', 'besides the', 'in front the'],
     quantity: [' some', ' many', ' a few', ' a handful of'],
-    weapons: [' missiles', ' rockets', ' rays', ' spicebombs', ' bunch of code', ' virus in an e-mail', ' bugs', ' #FatalError', ' lot of documentation', ' Codecademy Challenges'],
-    adjectives: [' solid', ' pointy', ' infectious', ' dangerous', ' hard', ' damned', ' unexpected', ' sharp', ' powerful', ' confusing', ' enormous', ' massive'],
-    adding: [' while', ' and', ' when'],
+    weapons: ['missile', 'rocket', 'ray', 'spicebomb', 'bunch of code', 'virus in an e-mail', 'bug', '#FatalError', 'lot of MDN documentation', 'Codecademy Challenge'],
+    adjectives: ['solid', 'pointy', 'infectious', 'dangerous', 'hard', 'damned', 'unexpected', 'sharp', 'powerful', 'confusing', 'enormous', 'massive'],
+    adding: ['while', 'and', 'when'],
     end: '...',
     /*
     **************************************
@@ -97,7 +97,72 @@ const words = {
 };
 
 /* FIRST COMMIT DONE */
-/* SECOND COMMIT DONE
+/*
+    SECOND COMMIT DONE
     Adds continuous and action words
     Adds .continue and .action
 */
+
+function listenCommentator() {
+    let msg = [];
+
+    // Make choice
+    const choice1 = words.start;
+    if (choice1 === 'A') {
+        // Log choice
+        msg.push(choice1);
+        // Make choice
+        const choice2 = Math.round(Math.random());
+        if (choice2 === 1) {
+            const selectObj = space.object;
+            if (selectObj[0] === 'a' || selectObj[0] === 'e' || selectObj[0] === 'i' || selectObj[0] === 'o' || selectObj[0] === 'u') {
+                msg.push('n ');
+                msg.push(selectObj);
+                msg.push(words.passive);
+                msg.push(words.locate);
+                msg.push(space.zone);
+                msg.push(words.end);
+                return msg.join(' ');
+            } else {
+                msg.push(selectObj);
+                msg.push(words.passive);
+                msg.push(words.locate);
+                msg.push(space.zone);
+                msg.push(words.end);
+                return msg.join(' ');
+            }
+        } else if (choice2 === 0) {
+            // Log choice
+            msg.push(words.weapon);
+            msg.push(words.action);
+            msg.push(words.locate);
+
+            const choice3 = Math.round(Math.random());;
+            if (choice3 === 1) {
+                // Log choice
+                msg.push(space.zone);
+                msg.push(words.end);
+                return msg.join(' ');
+            } else if (choice3 === 0) {
+                // Log choice
+                msg.push(space.spaceshipPart);
+                msg.push('of')
+                msg.push(space.spaceshipName);
+                msg.push(words.cause);
+                msg.push(space.effect);
+                msg.push(words.end);
+                return msg.join(' ');
+            }
+        }
+    /* THIRD COMMIT DONE
+        Adds the right 
+    */
+    } else if (choice1 === 'The') {
+        // Log choice
+        msg.push(choice1);
+        msg.push(space.spaceshipName);
+
+    }
+}
+
+console.log(listenCommentator())
