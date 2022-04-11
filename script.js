@@ -39,7 +39,7 @@ const words = {
         passive: ['passes', 'approaches', 'goes', 'moves', 'travels', 'advances', 'dodges'],
         continuous: ['passing', 'approaching', 'going to', 'collapsing', 'emerging from', 'flying', 'travelling', 'avoiding', 'escaping', 'entering'],
         actions: ['collides', 'smashes', 'crashes', 'explodes'],
-        causation: ['causing', 'making', 'generating', 'provoking', 'letting in'],
+        causation: ['causing', 'making', 'generating', 'provoking'],
         attack: ['fires', 'sends', 'attacks with', 'directs', 'targets']
     },
     location: ['in the', 'near the', 'right into the', 'beneath the', 'inside the', 'by the', 'through the', 'on the', 'above the', 'beside the', 'in front of the'],
