@@ -1,6 +1,6 @@
 const space = {
     objects: ['asteroid', 'star', 'comet', 'satelite', 'reinforcement', 'ally', 'enemy', 'unidentified spaceship', 'unidentified planet', 'meteoroid', 'Nebulae', 'dwarf planet'],
-    effects: ['an explosion', 'a laseration', 'critical damage', 'an infinite loop', 'a run out of memory error', 'a shutdown', 'a gas cloud', 'drama in the spacecrew'],
+    effects: ['an explosion', 'a laseration', 'critical damage', 'an infinite loop', 'a Ran Out of Memory error', 'a shutdown', 'a gas cloud', 'drama in the spacecrew', 'a crash', 'a Windows restart to install Updates (0/374)'],
     zones: ['Meteor Belt', 'Cloud Belt', 'Matrix Constellation', 'Star Cluster', 'Time Out Galaxy', 'Let Me Refuel Galaxy', 'Sucking Black Hole', 'Zion Constellation', 'Orion Constellation'],
     spaceships: [{name: 'Codecademyzor', structure: ['panels', 'tank', 'nose cone', 'propulsion system', 'eleveons', 'engines', 'flight deck', 'wings', 'payload doors']}, 
                  {name: 'Codenizer', structure: ['panels', 'tank', 'nose cone', 'propulsion system', 'eleveons', 'engines', 'flight deck', 'wings', 'payload doors']}],
