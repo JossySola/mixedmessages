@@ -185,7 +185,7 @@ function listenCommentator() {
             const choice6 = Math.round(Math.random());
             if (choice6 === 1) {
                 msg.push(words.add);
-                msg.push(words.quant);
+                msg.push('a');
                 msg.push(words.weapon);
                 msg.push(words.action);
                 msg.push('its');
