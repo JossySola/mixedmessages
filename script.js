@@ -37,7 +37,7 @@ const words = {
     starters: ['The', 'A'],
     verbs: {
         passive: ['passes', 'approaches', 'goes', 'moves', 'travels', 'advances', 'dodges'],
-        continuous: ['passing', 'approaching', 'going to', 'collapsing', 'emerging from', 'flying', 'travelling', 'avoiding', 'escaping'],
+        continuous: ['passing', 'approaching', 'going to', 'collapsing', 'emerging from', 'flying', 'travelling', 'avoiding', 'escaping', 'entering'],
         actions: ['collides', 'smashes', 'crashes', 'explodes'],
         causation: ['causing', 'making', 'generating', 'provoking', 'letting in', 'giving'],
         attack: ['fires', 'sends', 'attacks with', 'directs', 'targets']
