@@ -1,7 +1,7 @@
 const space = {
     objects: ['asteroid', 'star', 'comet', 'satelite', 'reinforcement', 'ally', 'enemy', 'unidentified spaceship', 'unidentified planet', 'meteoroid', 'Nebulae', 'dwarf planet'],
     effects: ['an explosion', 'a laseration', 'critical damage', 'an infinite loop', 'a run out of memory error', 'a shutdown', 'a gas cloud', 'drama in the spacecrew'],
-    zones: ['Meteor Belt', 'Cloud Belt', 'Matrix Constellation', 'Star Cluster', 'Time Out Galaxy', 'Let Me Refuel Galaxy', 'sucking Black Hole'],
+    zones: ['Meteor Belt', 'Cloud Belt', 'Matrix Constellation', 'Star Cluster', 'Time Out Galaxy', 'Let Me Refuel Galaxy', 'Sucking Black Hole', 'Zion Constellation', 'Orion Constellation'],
     spaceships: [{name: 'Codecademyzor', structure: ['panels', 'tank', 'nose cone', 'propulsion system', 'eleveons', 'engines', 'flight deck', 'wings', 'payload doors']}, 
                  {name: 'Codenizer', structure: ['panels', 'tank', 'nose cone', 'propulsion system', 'eleveons', 'engines', 'flight deck', 'wings', 'payload doors']}],
     /*
@@ -42,7 +42,7 @@ const words = {
         causation: ['causing', 'making', 'generating', 'provoking', 'letting in', 'giving'],
         attack: ['fires', 'sends', 'attacks with', 'directs', 'targets']
     },
-    location: ['in the', 'near the', 'right into the', 'beneath the', 'inside the', 'by the', 'through the', 'on the', 'above the', 'beside the', 'in front the'],
+    location: ['in the', 'near the', 'right into the', 'beneath the', 'inside the', 'by the', 'through the', 'on the', 'above the', 'beside the', 'in front of the'],
     quantity: ['a', 'one'],
     weapons: ['missile', 'rocket', 'radiation ray', 'spicebomb', 'bunch of code', 'virus attached to an e-mail', 'bug', '#FatalError', 'ton of MDN documentation', 'Codecademy Challenge'],
     adjectives: ['a solid', 'a damned', 'an encrypted', 'a dangerous', 'a hard', 'a pointy', 'an unexpected', 'a sharp', 'a powerful', 'a confusing', 'an enormous', 'a massive'],
@@ -109,14 +109,13 @@ function listenCommentator() {
     // Make choice
     const choice1 = words.start;
     if (choice1 === 'A') {
-        // Log choice
-        msg.push(choice1);
+        
         // Make choice
         const choice2 = Math.round(Math.random());
         if (choice2 === 1) {
             const selectObj = space.object;
             if (selectObj[0] === 'a' || selectObj[0] === 'e' || selectObj[0] === 'i' || selectObj[0] === 'o' || selectObj[0] === 'u') {
-                msg.push('n');
+                msg.push('An');
                 msg.push(selectObj);
                 msg.push(words.passive);
                 msg.push(words.locate);
@@ -124,6 +123,8 @@ function listenCommentator() {
                 msg.push(words.end);
                 return msg.join(' ');
             } else {
+                // Log choice
+                msg.push(choice1);
                 msg.push(selectObj);
                 msg.push(words.passive);
                 msg.push(words.locate);
@@ -133,6 +134,7 @@ function listenCommentator() {
             }
         } else if (choice2 === 0) {
             // Log choice
+            msg.push(choice1);
             msg.push(words.weapon);
             msg.push(words.action);
             msg.push(words.locate);
